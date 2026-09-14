@@ -16,6 +16,7 @@ const buttonVariants = cva(
         ghost: "text-muted-foreground hover:bg-accent hover:text-foreground",
         dark: "bg-foreground text-background hover:bg-foreground/85",
         heroOutline: "border border-hero-border bg-hero-panel text-hero-foreground backdrop-blur-md hover:bg-hero-panel-strong",
+        workspaceGhost: "text-workspace-muted hover:bg-workspace-soft hover:text-workspace-foreground",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {

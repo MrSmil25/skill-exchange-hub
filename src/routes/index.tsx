@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   ArrowDown,
   ArrowRight,
@@ -79,7 +79,7 @@ function LandingPage() {
           </nav>
 
           <Button asChild size="sm" className="ml-8 hidden lg:inline-flex">
-            <a href="#join">Start Exchange <ArrowRight className="size-4" /></a>
+            <Link to="/auth">Start Exchange <ArrowRight className="size-4" /></Link>
           </Button>
           <Button
             variant="ghost"
@@ -100,7 +100,7 @@ function LandingPage() {
                   {item.label}
                 </a>
               ))}
-              <Button asChild className="mt-3"><a href="#join" onClick={() => setMenuOpen(false)}>Start Exchange</a></Button>
+              <Button asChild className="mt-3"><Link to="/auth" onClick={() => setMenuOpen(false)}>Start Exchange</Link></Button>
             </div>
           </nav>
         )}
@@ -122,8 +122,8 @@ function LandingPage() {
                 Learn new skills without upfront cost. Teach what you know. Build verified proof of your abilities.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Button asChild size="lg"><a href="#join">Start Exchange <ArrowRight className="size-4" /></a></Button>
-                <Button asChild variant="heroOutline" size="lg"><a href="#how-it-works">Explore Skills <Search className="size-4" /></a></Button>
+                <Button asChild size="lg"><Link to="/auth">Start Exchange <ArrowRight className="size-4" /></Link></Button>
+                <Button asChild variant="heroOutline" size="lg"><Link to="/auth">Explore Skills <Search className="size-4" /></Link></Button>
               </div>
             </div>
 
