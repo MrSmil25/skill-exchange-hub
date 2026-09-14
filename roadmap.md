@@ -5,4 +5,4 @@
 - [x] Add protected student workspace layout
 - [x] Build skill-identity dashboard
 - [x] Add all requested workspace destinations
-- [ ] Verify signed-out access and responsive layouts
+- [x] Verify signed-out access and responsive layouts
