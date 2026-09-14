@@ -25,7 +25,7 @@ function DashboardPage() {
       const { data } = await supabase.from("profiles").select("*").eq("id", user.id).maybeSingle();
       if (data) return data;
       const metadata = user.user_metadata;
-      const draft = { id: user.id, display_name: String(metadata.display_name ?? user.email?.split("@")[0] ?? "Student"), faculty: String(metadata.faculty ?? "Universitas Indonesia"), university: "Universitas Indonesia" };
+      const draft = { id: user.id, display_name: String(metadata["display_name"] ?? user.email?.split("@")[0] ?? "Student"), faculty: String(metadata["faculty"] ?? "Universitas Indonesia"), university: "Universitas Indonesia" };
       const { data: created, error } = await supabase.from("profiles").insert(draft).select().single();
       if (error) throw error;
       return created;
