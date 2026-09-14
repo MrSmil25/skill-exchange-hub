@@ -56,6 +56,8 @@
   --color-clay: var(--clay);
   --color-rose: var(--rose);
   --color-surface-light: var(--surface-light);
+  --color-surface-foreground: var(--surface-foreground);
+  --color-surface-muted: var(--surface-muted);
   --color-hero-foreground: var(--hero-foreground);
   --color-hero-muted: var(--hero-muted);
   --color-hero-border: var(--hero-border);
@@ -110,6 +112,8 @@
   --clay: oklch(0.72 0.19 48);
   --rose: oklch(0.74 0.12 18);
   --surface-light: oklch(0.955 0.009 250);
+  --surface-foreground: oklch(0.19 0.04 256);
+  --surface-muted: oklch(0.48 0.025 250);
   --hero-foreground: oklch(0.99 0.003 250);
   --hero-muted: oklch(0.86 0.018 250);
   --hero-border: oklch(1 0 0 / 18%);

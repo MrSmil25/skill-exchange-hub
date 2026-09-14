@@ -135,7 +135,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="border-b border-border bg-surface-light py-20 sm:py-28">
+        <section className="border-b border-border bg-surface-light py-20 text-surface-foreground sm:py-28">
           <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
             <SectionIntro eyebrow="The gap" title="Potential is everywhere. Access isn't." description="University is full of capable people, but the systems around learning and opportunity still leave too much talent unseen." dark />
             <div className="mt-14 grid border-y border-border md:grid-cols-3">
@@ -182,7 +182,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section id="passport" className="scroll-mt-18 border-b border-border bg-surface-light py-20 sm:py-28">
+        <section id="passport" className="scroll-mt-18 border-b border-border bg-surface-light py-20 text-surface-foreground sm:py-28">
           <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-10">
             <div>
               <SectionIntro eyebrow="Skill Passport" title="Proof that grows with you." description="Not a list of claims. A living professional profile built from real exchanges, peer assessment, and demonstrated skill." dark />
@@ -235,11 +235,11 @@ function ExchangePair({ left, right, icon }: { left: string; right: string; icon
 }
 
 function SectionIntro({ eyebrow, title, description, dark = false }: { eyebrow: string; title: string; description: string; dark?: boolean }) {
-  return <div className="grid gap-6 lg:grid-cols-[0.8fr_1.5fr_1fr] lg:items-end"><p className={cn("text-xs font-semibold uppercase", dark ? "text-primary" : "text-accent")}>{eyebrow}</p><h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h2><p className="max-w-md text-sm leading-6 text-muted-foreground lg:justify-self-end">{description}</p></div>;
+  return <div className="grid gap-6 lg:grid-cols-[0.8fr_1.5fr_1fr] lg:items-end"><p className={cn("text-xs font-semibold uppercase", dark ? "text-primary" : "text-accent")}>{eyebrow}</p><h2 className="font-display text-4xl font-bold leading-tight sm:text-5xl">{title}</h2><p className={cn("max-w-md text-sm leading-6 lg:justify-self-end", dark ? "text-surface-muted" : "text-muted-foreground")}>{description}</p></div>;
 }
 
 function Problem({ number, icon, title, text }: { number: string; icon: React.ReactNode; title: string; text: string }) {
-  return <article className="border-b border-border py-8 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0 md:last:pr-0"><div className="flex items-center justify-between"><span className="text-xs font-semibold text-muted-foreground">{number}</span><span className="text-primary [&>svg]:size-5">{icon}</span></div><h3 className="mt-12 max-w-xs font-display text-xl font-bold">{title}</h3><p className="mt-4 max-w-sm text-sm leading-6 text-muted-foreground">{text}</p></article>;
+  return <article className="border-b border-border py-8 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0 md:last:pr-0"><div className="flex items-center justify-between"><span className="text-xs font-semibold text-surface-muted">{number}</span><span className="text-primary [&>svg]:size-5">{icon}</span></div><h3 className="mt-12 max-w-xs font-display text-xl font-bold">{title}</h3><p className="mt-4 max-w-sm text-sm leading-6 text-surface-muted">{text}</p></article>;
 }
 
 function Step({ number, icon, title, text, accent }: { number: string; icon: React.ReactNode; title: string; text: string; accent: "blue" | "orange" }) {
@@ -251,7 +251,7 @@ function CreditFlow({ icon, label, detail, badge, featured = false }: { icon: Re
 }
 
 function PassportPoint({ icon, label }: { icon: React.ReactNode; label: string }) {
-  return <li className="flex items-center gap-3 text-sm font-medium"><span className="grid size-9 place-items-center rounded-md bg-secondary text-primary [&>svg]:size-4">{icon}</span>{label}</li>;
+  return <li className="flex items-center gap-3 text-sm font-medium"><span className="grid size-9 place-items-center rounded-md bg-primary text-primary-foreground [&>svg]:size-4">{icon}</span>{label}</li>;
 }
 
 function PassportCard() {
