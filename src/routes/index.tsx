@@ -214,7 +214,7 @@ function LandingPage() {
               <p className="text-xs font-semibold uppercase">Your next skill is already on campus</p>
               <h2 className="mt-4 max-w-3xl font-display text-4xl font-bold leading-tight sm:text-6xl">What will you exchange first?</h2>
             </div>
-            <Button asChild variant="dark" size="lg" className="shrink-0"><a href="mailto:hello@exchange.campus">Join the first cohort <ArrowRight className="size-4" /></a></Button>
+            <Button asChild variant="dark" size="lg" className="shrink-0"><a href="#how-it-works">Explore the exchange <ArrowRight className="size-4" /></a></Button>
           </div>
         </section>
       </main>
