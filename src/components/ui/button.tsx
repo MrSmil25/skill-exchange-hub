@@ -4,7 +4,7 @@ import { forwardRef, type ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex shrink-0 items-center justify-center gap-2 rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex shrink-0 items-center justify-center gap-2 rounded-md font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
@@ -15,6 +15,7 @@ const buttonVariants = cva(
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         ghost: "text-muted-foreground hover:bg-accent hover:text-foreground",
         dark: "bg-foreground text-background hover:bg-foreground/85",
+        heroOutline: "border border-hero-border bg-hero-panel text-hero-foreground backdrop-blur-md hover:bg-hero-panel-strong",
         link: "text-primary underline-offset-4 hover:underline",
       },
       size: {
